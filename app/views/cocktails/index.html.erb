@@ -1,0 +1,7 @@
+<h1>Index Cocktails</h1>
+
+<% @cocktails.each do |cocktail| %>
+<ul>
+  <a href="/cocktails/<%= cocktail.id%>" ><%= cocktail.name %>
+  </ul>
+  <% end %>
