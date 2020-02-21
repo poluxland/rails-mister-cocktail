@@ -1,7 +1,24 @@
-<h1>Index Cocktails</h1>
 
-<% @cocktails.each do |cocktail| %>
-<ul>
-  <a href="/cocktails/<%= cocktail.id%>" ><%= cocktail.name %>
-  </ul>
-  <% end %>
+
+<div class="container">
+  <div class="card-deck">
+    <% @cocktails.each do |cocktail| %>
+    <%= link_to cocktail_path(cocktail) do %>
+    <div class="card">
+      <img class="card-img-top" src="<%= cocktail.photo %>" alt="Card image cap">
+      <div class="card-body">
+        <h5 class="card-title"><%= cocktail.name %></h5>
+        <% end %>
+        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+      </div>
+    </div>
+    <% end %>
+  </div>
+
+
+
+
+
+
+
