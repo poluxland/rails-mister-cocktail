@@ -3,7 +3,7 @@
   <div class="card-deck">
     <% @cocktails.each do |cocktail| %>
       <%= link_to cocktail_path(cocktail) do %>
-      <div class="card">
+      <div class="col-sm-4 card">
         <!-- <img class="card-img-top" src="<%= cocktail.photo %>" alt="Card image cap"> -->
         <% if cocktail.photo.attached? %>
           <%= cl_image_tag cocktail.photo.key, class:"card-img-top"  %>
